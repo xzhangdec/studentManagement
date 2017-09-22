@@ -1,0 +1,34 @@
+header,aside {
+            font-family: serif;
+        }
+header{
+            text-align: center;
+            margin-top:40px;
+            margin-bottom: 50px;
+
+}
+#uploadForm {
+            margin-top:40px;
+            float: left;
+            width: 30%;
+}
+aside {
+            margin-top:40px;
+            float: left;
+            margin-left: 4%;
+            width:65%;
+}
+img {
+            float: left;
+            width: 20px;
+            height: 20px;
+        }
+.filter {
+            margin-bottom: 10px;
+            width: 92.5%;
+            float: left;
+}
+#pageSelect {
+            float: left;
+            margin-left: 10px;
+}

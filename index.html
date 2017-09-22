@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.3/css/bootstrapValidator.min.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script>
+
+    </script>
+    <link rel="stylesheet" type="text/css" href="student_manage.css">>
+</head>
+<body>
+<div >
+    <header>
+        <i class="fa fa-address-book" aria-hidden="true"></i>
+        <h2>STUDENT INFORMATION</h2>
+    </header>
+    <form class="well form-horizontal" action=" " method="post"  id="uploadForm" onsubmit="return false">
+        <fieldset>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">First Name</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" id="firstName" size="30" name="First Name" class="ipt form-control"  placeholder="First Name" >
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label" >Last Name</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input type="text" name="name" size="30" id="secondName" name="Second Name" class="ipt form-control" placeholder="Last Name">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+            <div class="form-group">
+                <label class="col-xs-4 control-label">E-Mail</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                        <input type="text" name="Email" size="30" id="email" class="ipt form-control" placeholder="E-Mail Address">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Location</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                        <input type="text" name="Location" id="location" class="ipt form-control" ondrop="drop(event)" ondragover="allowDrop(event)"  placeholder="NJ">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Phone #</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                        <input type="text" name="Phone" size="30" id="phone" class="ipt form-control" placeholder="(845)555-1212">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Select Basic -->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Cur-Class</label>
+                <div class="col-md-8 selectContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-graduation-cap"></i></span>
+                        <input type="text" name="C_class" size="30" id="cclass" class="ipt form-control" placeholder="Current Class/10th">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">P-Address</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input type="text" name="P_address" size="30" id="paddress" class="ipt form-control" placeholder="Permutation Address">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">C-Address</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                        <input type="text" name="C_address" size="30" id="caddress" class="ipt form-control"  placeholder="Communication Address">
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Eng-Marks</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-leaf"></i></span>
+                        <input type="number" name="E_number" size="30" id="e_number" class="ipt form-control"  placeholder="English Marks/90">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Sci-Marks</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-leaf"></i></span>
+                        <input type="number" name="S_number" size="30" id="s_number" class="ipt form-control" placeholder="Science Marks/90">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Comp-Marks</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-leaf"></i></span>
+                        <input type="number" name="C_number" size="30" id="c_number" class="ipt form-control" placeholder="Computer Marks/90">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Text input-->
+
+            <div class="form-group">
+                <label class="col-xs-4 control-label">Hdw-Marks</label>
+                <div class="col-md-8 inputGroupContainer">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-leaf"></i></span>
+                        <input type="number" name="H_number" size="30" id="h_number" class="ipt form-control" placeholder="Hardware Marks/90">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button -->
+            <div class="form-group">
+                <label class="col-md-2 control-label"></label>
+                <div class="col-md-2">
+                    <button type="submit" class="btn btn-warning" id="Upload">Send <span class="glyphicon glyphicon-send"></span></button>
+                </div>
+            </div>
+
+        </fieldset>
+    </form>
+    <aside>
+        <div class="searchform cf">
+            <input id="searchInput" type="text" onkeyup="filterTable()" placeholder="Filter something ? Enter Here                                                                       ================> Select number of rows in left" class="filter">
+            <div id="pageSelect">
+                <div class="form-group">
+                    <select>
+                        <option>2</option>
+                        <option>5</option>
+                        <option>10</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div id="result">
+        </div>
+
+    </aside>
+</div>
+</div><!-- /.container -->
+<script type= text/javascript src="student_manage.js"></script>
+</body>
+</html>
